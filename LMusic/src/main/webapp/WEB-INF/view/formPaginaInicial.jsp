@@ -7,7 +7,7 @@
 <title>Página Inicial</title>
 </head>
 <body>
-	<h1>Página Inicial</h1>
-	<p>Continua...</p>
+<h1>Página Inicial</h1>
+<p>Continua...</p>
 </body>
 </html>

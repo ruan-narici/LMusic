@@ -16,15 +16,17 @@ public class Musica {
 	private String artista;
 	private String dataLancamento;
 	private String genero;
+	private String link;
 	@ManyToOne
 	private Usuario proprietario;
 
-	public Musica(String nome, String artista, String dataLancamento, String genero, Usuario proprietario) {
+	public Musica(String nome, String artista, String dataLancamento, String genero, String link, Usuario proprietario) {
 		super();
 		this.nome = nome;
 		this.artista = artista;
 		this.dataLancamento = dataLancamento;
 		this.genero = genero;
+		this.link = link;
 		this.proprietario = proprietario;
 	}
 
@@ -53,6 +55,10 @@ public class Musica {
 
 	public Usuario getProprietario() {
 		return proprietario;
+	}
+	
+	public String getLink() {
+		return link;
 	}
 
 }
