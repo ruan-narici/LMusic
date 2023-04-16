@@ -1,0 +1,11 @@
+#REQUISITOS
+
+##Requisitos de sistema
+O sistema deverá exibir uma lista confidencial de músicas com algumas informações adicionais sobre elas.
+
+##Requisitos funcionais
+O usuário deverá fazer login para poder acessar a lista de músicas;
+A lista de músicas será confidencial para cada usuário;
+O usuário poderá adicionar, editar e excluir uma música da lista;
+O usuário poderá alterar a sua própria senha;
+O usuário com privilégio de administrador poderá excluir outros usuários do sistema;
