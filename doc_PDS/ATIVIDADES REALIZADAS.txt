@@ -1,0 +1,13 @@
+#ATIVIDADES REALIZADAS
+
+[X]Criação dos requisitos;
+[X]Criação do diagrama de caso de uso;
+[X]Criação do diagrama de classe conceitual;
+[X]Criação das classes modelo;
+[X]Configuração do pom.xml (ADD DEPENDENCY);
+[X]Configuração do persistence.xml;
+[x]Criação da conexão com o BD através do EntityManagerFactory;
+[X]Cadastro de usuário (BD)(DAO);
+[X]Validação de usuário (BD)(DAO);
+[X]Notificação de usuário ou senha inválida;
+
