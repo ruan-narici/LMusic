@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Este arquivo deve ficar em uma pasta chamada META-INF -->
+
+<!-- Tag raiz para persistencia -->
+<persistence version="2.2"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+
+	<!-- Tag obrigatoria para a persistencia -->
+	<persistence-unit name="musicHibernate"
+		transaction-type="RESOURCE_LOCAL">
+
+		<!-- Criando a tag para prorpiedades -->
+		<properties>
+
+			<!-- Definindo o driver, o endereço do banco de dados, o usuario, a senha 
+				e o dialeto usado pelo banco de dados -->
+			<property name="javax.persistence.jdbc.driver"
+				value="com.mysql.cj.jdbc.Driver" />
+
+			<!-- Nessa etapa eu digo que caso a tabela nao exista no BD, ela sera 
+				criada. -->
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:mysql://localhost:3306/lmusic?createDatabaseIfNotExist=true" />
+			<property name="javax.persistence.jdbc.user" value="root" />
+			<property name="javax.persistence.jdbc.password"
+				value="root" />
+
+			<!-- Definindo o tipo de dialogo que o hibernate tera com o BD (varia 
+				de acordo com o BD) -->
+			<property name="hibernate.dialect"
+				value="org.hibernate.dialect.MySQL8Dialect" />
+
+			<!-- Exibindo as alteracoes realizadas no BD -->
+			<property name="hibernate.show_sql" value="true" />
+
+			<!-- Formatando o linha SQL -->
+			<property name="hibernate.format_sql" value="true" />
+
+			<!-- Criando a tabela no banco de dados / atualizando -->
+			<!-- A tabela so sera criada caso a mesma nao exista no BD. -->
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+		</properties>
+	</persistence-unit>
+</persistence>
+
