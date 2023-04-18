@@ -10,4 +10,6 @@
 [X]Cadastro de usuário (BD)(DAO);
 [X]Validação de usuário (BD)(DAO);
 [X]Notificação de usuário ou senha inválida;
-
+[X]Lógica para alteração de senha de usuário;
+[X]Lógica para exclusão de usuário;
+[X]Lógica para verificação de sessão ativa (HttpSession)
