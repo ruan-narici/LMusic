@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import dao.UsuarioDAO;
-import model.Usuario;
 import servlet.Rota;
 
 public class autenticarUsuario implements Acao{

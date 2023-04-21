@@ -2,6 +2,7 @@ package servlet;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -68,8 +69,9 @@ public class Rota extends HttpServlet {
 		}
 		}
 
-		//Verificando se o usuário já está logado no sistema
-		//Se não estiver, ele vai ser redirecionado para a pagina principal para que ele possa entrar ou se cadastrar.
+		// Verificando se o usuário já está logado no sistema
+		// Se não estiver, ele vai ser redirecionado para a pagina principal para que
+		// ele possa entrar ou se cadastrar.
 		if (!statusSessao) {
 			switch (acao) {
 			case "gerenciarUsuario": {
@@ -94,12 +96,14 @@ public class Rota extends HttpServlet {
 				excluirUsuario excluirUsuario = new excluirUsuario();
 				excluirUsuario.executar(req, resp);
 				System.out.println("Executando a exclusao do usuario no banco de dados");
+				break;
 			}
 
 			}
 		} else {
-			resp.sendRedirect("index.jsp");
+			if (req.getParameter("erro") == null && !acao.equals("autenticarUsuario")) {
+				resp.sendRedirect("index.jsp");
+			}
 		}
-
 	}
 }
