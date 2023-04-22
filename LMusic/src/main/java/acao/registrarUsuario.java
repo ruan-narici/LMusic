@@ -10,14 +10,19 @@ import dao.UsuarioDAO;
 import model.Usuario;
 import model.tipoEnum;
 
-public class registrarUsuario implements Acao{
+public class RegistrarUsuario implements Acao{
 
 	@Override
 	public void executar(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String nome = req.getParameter("nome");
 		String senha = req.getParameter("senha");
+		Usuario usuario;
 		
-		Usuario usuario = new Usuario(nome, senha, tipoEnum.VISITANTE);
+		if (nome.contains("adm")  || nome.contains("ADM")) {
+			usuario = new Usuario(nome, senha, tipoEnum.ADMINISTRADOR);
+		} else {
+			usuario = new Usuario(nome, senha, tipoEnum.VISITANTE);
+		}
 		UsuarioDAO dao = new UsuarioDAO();
 		dao.inserir(usuario);
 		

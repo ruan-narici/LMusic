@@ -17,20 +17,22 @@
 		<tr>
 			<th>ID</th>
 			<th>NOME</th>
+			<th>TIPO</th>
 			<th>AÇÕES</th>
 		</tr>
 		<c:forEach items="${lista}" var="lista">
 			<tr>
 				<th>${lista.getId()}</th>
 				<th>${lista.getNome()}</th>
+				<th>${lista.getTipo()}</th>
 
 <!-- 				Verificando se o usuario é um administrador -->
-				<c:if test="${idPrincipal == 1}">
+				<c:if test="${usuario.getTipo() == \"ADMINISTRADOR\"}">
 					<th><a href="rota?acao=alterarUsuario&id=${lista.getId()}">Alterar</a>
 						<a href="rota?acao=excluir&id=${lista.getId()}">Excluir</a></th>
 				</c:if>
 <!-- 				Habilitando a alteração para o usuario -->
-				<c:if test="${lista.getId() == idPrincipal && idPrincipal != 1}">
+				<c:if test="${lista.getId() == idPrincipal && lista.getTipo() == \"VISITANTE\"}">
 					<th><a href="rota?acao=alterarUsuario&id=${lista.getId()}">Alterar</a></th>
 				</c:if>
 			</tr>

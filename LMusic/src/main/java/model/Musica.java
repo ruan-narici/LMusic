@@ -21,7 +21,6 @@ public class Musica {
 	private Usuario proprietario;
 
 	public Musica(String nome, String artista, String dataLancamento, String genero, String link, Usuario proprietario) {
-		super();
 		this.nome = nome;
 		this.artista = artista;
 		this.dataLancamento = dataLancamento;
@@ -41,24 +40,48 @@ public class Musica {
 		return nome;
 	}
 
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
 	public String getArtista() {
 		return artista;
+	}
+
+	public void setArtista(String artista) {
+		this.artista = artista;
 	}
 
 	public String getDataLancamento() {
 		return dataLancamento;
 	}
 
+	public void setDataLancamento(String dataLancamento) {
+		this.dataLancamento = dataLancamento;
+	}
+
 	public String getGenero() {
 		return genero;
+	}
+
+	public void setGenero(String genero) {
+		this.genero = genero;
+	}
+
+	public String getLink() {
+		return link;
+	}
+
+	public void setLink(String link) {
+		this.link = link;
 	}
 
 	public Usuario getProprietario() {
 		return proprietario;
 	}
-	
-	public String getLink() {
-		return link;
+
+	public void setProprietario(Usuario proprietario) {
+		this.proprietario = proprietario;
 	}
 
 }

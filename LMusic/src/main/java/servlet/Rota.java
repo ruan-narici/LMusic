@@ -2,7 +2,6 @@ package servlet;
 
 import java.io.IOException;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,14 +9,20 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import acao.alterarUsuario;
-import acao.autenticarUsuario;
-import acao.excluirUsuario;
+import acao.AlterarUsuario;
+import acao.AutenticarUsuario;
+import acao.ExcluirMusica;
+import acao.ExcluirUsuario;
+import acao.formAdicionarMusica;
+import acao.formAlterarMusica;
 import acao.formAlterarUsuario;
 import acao.formCadastroUsuario;
 import acao.formEntradaUsuario;
 import acao.formGerenciamentoUsuario;
-import acao.registrarUsuario;
+import acao.formPaginaInicial;
+import acao.RegistrarUsuario;
+import acao.SalvarAlteracaoMusica;
+import acao.SalvarMusica;
 
 @WebServlet(urlPatterns = "/rota")
 public class Rota extends HttpServlet {
@@ -50,7 +55,7 @@ public class Rota extends HttpServlet {
 			break;
 		}
 		case "registrarUsuario": {
-			registrarUsuario registrar = new registrarUsuario();
+			RegistrarUsuario registrar = new RegistrarUsuario();
 			registrar.executar(req, resp);
 			System.out.println("Executando o registro do usuario no banco de dados");
 			break;
@@ -62,7 +67,7 @@ public class Rota extends HttpServlet {
 			break;
 		}
 		case "autenticarUsuario": {
-			autenticarUsuario autenticar = new autenticarUsuario();
+			AutenticarUsuario autenticar = new AutenticarUsuario();
 			autenticar.executar(req, resp);
 			System.out.println("Executando a autenticacao do usuario no banco de dados");
 			break;
@@ -74,6 +79,12 @@ public class Rota extends HttpServlet {
 		// ele possa entrar ou se cadastrar.
 		if (!statusSessao) {
 			switch (acao) {
+			case "paginaInicial": {
+				formPaginaInicial form = new formPaginaInicial();
+				form.executar(req, resp);
+				System.out.println("Tela da pagina inicial sendo executada");
+				break;
+			}
 			case "gerenciarUsuario": {
 				formGerenciamentoUsuario form = new formGerenciamentoUsuario();
 				form.executar(req, resp);
@@ -87,21 +98,57 @@ public class Rota extends HttpServlet {
 				break;
 			}
 			case "alterar": {
-				alterarUsuario alterarUsuario = new alterarUsuario();
+				AlterarUsuario alterarUsuario = new AlterarUsuario();
 				alterarUsuario.executar(req, resp);
 				System.out.println("Executando a alteracao do usuario no banco de dados");
 				break;
 			}
 			case "excluir": {
-				excluirUsuario excluirUsuario = new excluirUsuario();
+				ExcluirUsuario excluirUsuario = new ExcluirUsuario();
 				excluirUsuario.executar(req, resp);
 				System.out.println("Executando a exclusao do usuario no banco de dados");
 				break;
 			}
+			
+			
+			
+			//Musica
+			case "adicionarNovaMusica": {
+				formAdicionarMusica form = new formAdicionarMusica();
+				form.executar(req, resp);
+				System.out.println("Tela de adicao de musica sendo executada");
+				break;
+			}
+			case "salvarMusica": {
+				SalvarMusica salvarMusica = new SalvarMusica();
+				salvarMusica.executar(req, resp);
+				System.out.println("Executando o salvarMusica no banco de dados");
+				break;
+			}
+			case "alterarMusica": {
+				formAlterarMusica form = new formAlterarMusica();
+				form.executar(req, resp);
+				System.out.println("Tela de alteracao de musica sendo executada");
+				break;
+			}
+			case "salvarAlteracaoMusica": {
+				SalvarAlteracaoMusica salvarAlteracaoMusica = new SalvarAlteracaoMusica();
+				salvarAlteracaoMusica.executar(req, resp);
+				System.out.println("Executando o salvarAlteracaoMusica no banco de dados");
+				break;
+			}
+			case "excluirMusica": {
+				ExcluirMusica excluirMusica = new ExcluirMusica();
+				excluirMusica.executar(req, resp);
+				System.out.println("Executando o excluirMusica no banco de dados");
+				break;
+			}
+			
 
 			}
 		} else {
-			if (req.getParameter("erro") == null && !acao.equals("autenticarUsuario")) {
+			if (!acao.equals("entrar") && !acao.equals("cadastrar") && !acao.equals("autenticarUsuario") && !acao.equals("registrarUsuario")) {
+				System.out.println("O usuario precisa entrar no sistema para ter acesso a esta area");
 				resp.sendRedirect("index.jsp");
 			}
 		}
