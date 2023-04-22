@@ -12,4 +12,8 @@
 [X]Notificação de usuário ou senha inválida;
 [X]Lógica para alteração de senha de usuário;
 [X]Lógica para exclusão de usuário;
-[X]Lógica para verificação de sessão ativa (HttpSession)
+[X]Lógica para verificação de sessão ativa (HttpSession);
+[X]CRUD completo das músicas (BD) (DAO); **************
+[X]Lógica de cadastro de Usuário Administrador e Visitante;
+[X]Confidencialidade da lista de músicas baseado no id do usuário;
+[X]Correção de erros de login e cadastro;
