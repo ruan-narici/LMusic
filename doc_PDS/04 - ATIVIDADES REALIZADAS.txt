@@ -17,3 +17,5 @@
 [X]Lógica de cadastro de Usuário Administrador e Visitante;
 [X]Confidencialidade da lista de músicas baseado no id do usuário;
 [X]Correção de erros de login e cadastro;
+[X]Estilização das páginas com Tailwind CSS;
+[X]Criação do arquivo .WAR;
