@@ -4,11 +4,14 @@
 | -------------  | --- |
 | :sparkles: Nome        | **LMusic**
 | :label: Tecnologias | HTML, JSP, JSTL, CSS, TAILWIND, Java, Maven, JPA Hibernate, MySQL e Apache Tom Cat Server (tecnologias utilizadas)
-| :rocket: URL         | xx
+| :rocket: URL         | https://www.youtube.com/watch?v=yMDZFukZEuQ
 | :fire: Desafio     | ~~
 
 <!-- Inserir imagem com a #vitrinedev ao final do link -->
-![Ruan Narici](#vitrinedev)
+![Ruan Narici](./LMusic/assets/img/preview.gif#vitrinedev)
+<h1>
+Assista o funcionamento deste projeto <a href="https://www.youtube.com/watch?v=yMDZFukZEuQ">aqui</a>.
+</h1>
 
 ``` 
 > Status do projeto 
