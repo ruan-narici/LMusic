@@ -42,7 +42,7 @@
                     <th class="px-3 py-2">On & On (feat. Daniel Levi)</th>
                     <th class="px-3 py-2">Cartoon</th>
                     <th class="px-3 py-2">01/01/2015</th>
-                    <th class="px-3 py-2">Dance/Eletrônica</th>
+                    <th class="px-3 py-2">Dance/Eletronica</th>
                     <th class="px-3 py-2"><a href="https://www.youtube.com/watch?v=K4DyBUG242c&ab_channel=NoCopyrightSounds" target="_blank" class="dark:text-slate-400 dark:before:bg-slate-700 dark:hover:text-slate-300">Acessar</a></th>
                     <th class="px-3 py-2"><a href="" class="dark:text-slate-400 dark:before:bg-slate-700 dark:hover:text-slate-300">Alterar</a> <a
                             href="" class="dark:text-slate-400 dark:before:bg-slate-700 dark:hover:text-slate-300">Excluir</a></th>
