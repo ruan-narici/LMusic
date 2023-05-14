@@ -24,17 +24,17 @@ Essas músicas são de acesso privado pelo usuário. Implementei uma lógica de 
 ## Funcionalidades
 * Cadastro de usuário;
 * Entrada com usuário e senha;
-* Exibição de lista de músicas;
-* Adição de música à lista;
-* Exclusão de música da lista;
-* Alteração de informações da música da lista;
-* Lista de música privada;
+* Exibição da lista de músicas;
+* Adição de músicas à lista;
+* Exclusão de músicas da lista;
+* Alteração de informações das músicas da lista;
+* Lista de músicas privada;
 * Alteração de senha de usuário;
 * **ADM** Alteração de senha de qualquer usuário;
 * **ADM** Exclusão de qualquer usuário.
 
 ## Acesso ao Projeto
-O projeto possui uma tela de entrada sem tecnologia de criptografia.
+O projeto possui uma tela de entrada por usuário e senha sem tecnologia de criptografia.
 
 ## Autor
 <table>
