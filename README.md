@@ -20,6 +20,8 @@
 O sistema foi criado para que o usuário possa salvar suas músicas favoritas junto a algumas informações sobre ela. 
 Essas músicas são de acesso privado pelo usuário. Implementei uma lógica de entrada por usuário e senha para que o usuário possa ter privacidade sobre suas músicas adicionadas.
 
+Acesse o Processo de Desenvolvimento do Projeto <a href="https://github.com/ruan-narici/LMusic/tree/main/doc_PDS">aqui</a>.
+
 
 ## Funcionalidades
 * Cadastro de usuário;
